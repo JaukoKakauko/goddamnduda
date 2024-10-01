@@ -20,8 +20,14 @@
     ?>
 
     @foreach ($users as $user)
-    <h1>{{$user['name']}}</h1>
-    <h2>{{$user['age']}}</h2>
+    
+    @if ($user['age'] >= 18)
+    <h2>pouzivatel {{$user['name']}} ma {{$user['age']}} rokov a moze soferovat</h2>
+    @else
+    <h2>pouzivatel {{$user['name']}} ma {{$user['age']}} rokov a nemoze soferovat</h2>
+    @endif  
     @endforeach
+
+    
 </body>
 </html>
