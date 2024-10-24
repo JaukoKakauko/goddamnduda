@@ -9,16 +9,16 @@ class DashboardController extends Controller
     public function index () {
         
         $users = [ [
-            'name' => 'meno 1',
+            'name' => 'Mikulas',
             'age' => '18',
         ], 
         [
-            'name' => 'meno 2',
+            'name' => 'Joni',
             'age' => '17',
         ],
          
         [
-            'name' => 'meno 3',
+            'name' => 'Ferda',
             'age' => '21',
         ] 
     ];
