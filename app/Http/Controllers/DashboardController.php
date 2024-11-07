@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class DashboardController extends Controller
 {
@@ -22,7 +23,11 @@ class DashboardController extends Controller
             'age' => '21',
         ] 
     ];
-        
-        return view ("dashboard",['users'=> $users]);
+        $posts = Post::all();
+
+        return view ("dashboard",[
+            'users'=> $users,
+            "posts"=>$posts
+        ]);
     }
 }
