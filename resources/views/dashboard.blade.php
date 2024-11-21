@@ -43,14 +43,17 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <h4> Share yours ideas </h4>
+        <form action="{{ route("post.store") }}" method="post">
+            @csrf
         <div class="row">
             <div class="mb-3">
-                <textarea class="form-control" id="idea" rows="3"></textarea>
+                <textarea class="form-control" id="idea" rows="3" name="content"></textarea>
             </div>
             <div class="">
                 <button class="btn btn-dark"> Share </button>
             </div>
         </div>
+    </form>
         <hr>
        @foreach ($posts as $post)
        
