@@ -10,6 +10,13 @@
                             </a></h5>
                     </div>
                 </div>
+                <div>
+                    <form action="{{ route("post.destroy", $post->id ) }}" method="post">
+                        @method("delete")
+                        @csrf
+                        <button type="submit"> X </button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="card-body">
@@ -47,12 +54,10 @@
                                 ago</small>
                         </div>
                         <p class="fs-6 mt-3 fw-light">
-                            and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-                            Evil)
+                            and 1.10.33 of "de Arbus Cleum et Marloborum" (The Prison Song)
                             by
-                            Cicero, written in 45 BC. This book is a treatise on the theory of ethics,
-                            very
-                            popular during the Renaissan
+                            Cigaro, written in 45 BC. This book is a treatise on the theory of smoking,
+                            drinking and baking bread with the boys at 3AM
                         </p>
                     </div>
                 </div>
