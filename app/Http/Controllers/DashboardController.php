@@ -9,6 +9,9 @@ class DashboardController extends Controller
 {
     public function index () {
         
+        $posts = Post::orderBy("created_at","desc")->get();
+
+
         $users = [ [
             'name' => 'Mikulas',
             'age' => '18',

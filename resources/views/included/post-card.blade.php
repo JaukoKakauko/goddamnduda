@@ -15,8 +15,12 @@
                         @method("delete")
                         @csrf
                         <button type="submit"> X </button>
+
+                       
                     </form>
+                    <a href="{{ route('post.show', $post->id ) }}">show</a>
                 </div>
+                
             </div>
         </div>
         <div class="card-body">
