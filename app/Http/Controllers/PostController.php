@@ -37,4 +37,19 @@ class PostController extends Controller
             'post' =>$post,
         ]);
     }
+    public function update(Post $post)
+    {
+        $validated = request()->validate([
+            "content" => "required|min:1|max:255",
+        ]);
+        $post->content = $validated["content"]; // check
+        $post->save();
+        return redirect()->route("dashboard.index")->with("success", "Post was successfuly updated!");
+    }
+    public function edit(Post $post)
+    {
+        return view("included.post-update", [
+            'post' => $post,
+        ]);
+    }
 }

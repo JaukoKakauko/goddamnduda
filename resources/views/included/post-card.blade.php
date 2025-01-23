@@ -19,6 +19,7 @@
                        
                     </form>
                     <a href="{{ route('post.show', $post->id ) }}">show</a>
+                    <a href="{{ route('post.edit', $post->id) }}">UPDATE</a>
                 </div>
                 
             </div>
